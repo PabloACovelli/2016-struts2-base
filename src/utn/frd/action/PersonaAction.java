@@ -1,8 +1,10 @@
 package utn.frd.action;
 
 import com.opensymphony.xwork2.ActionSupport;
-import db.PersistentManager;
+
 import utn.frd.bean.Persona;
+import utn.frd.db.PersistentManager;
+
 import java.util.List;
 
 public class PersonaAction extends ActionSupport {
