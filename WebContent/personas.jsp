@@ -16,6 +16,6 @@
 	<s:submit></s:submit>
 	<s:actionerror/>
 	</s:form>
-
+	
 </body>
 </html>

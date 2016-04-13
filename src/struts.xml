@@ -21,6 +21,7 @@
 	<result name="error">/personas.jsp</result>
 	<result name="success">/personas.jsp</result>
 	</action>
+	
    
     </package>
  
