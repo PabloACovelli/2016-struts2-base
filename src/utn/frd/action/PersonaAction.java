@@ -43,9 +43,9 @@ public class PersonaAction extends ActionSupport {
 		personas.add(p);
 		
 		
-		setName(" ");
-		setAge(" ");
-		setGender(" ");
+		setName(null);
+		setAge(null);
+		setGender(null);
 
 		return SUCCESS;
 		
@@ -70,13 +70,14 @@ public class PersonaAction extends ActionSupport {
 		
 		if (persona != null){
 			personas.remove(persona);
+			
 		    }
 		else{
 			 addActionError("Persona inexistente");
 			 
 		    }
 		
-		
+		setId(null);
 		return SUCCESS;
 		
 	 }
@@ -102,14 +103,17 @@ public class PersonaAction extends ActionSupport {
 			persona.setName(name);
 			persona.setAge(edad);
 			persona.setGender(gender);
-		    
-			 } 
+			} 
 		
 		else {
 			addActionError("Persona inexistente");
 			
 		     }
 		
+	    setId(null);
+	    setName(null);
+	    setAge(null);
+	    setGender(null);
 	    
 	    return SUCCESS;
 	
