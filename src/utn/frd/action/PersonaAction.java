@@ -18,6 +18,9 @@ public class PersonaAction extends ActionSupport {
 	private String gender;
 	private String id;
 	private List<Persona> personas;
+	private long idCorrecto;
+	private long idUltimo;
+	private int posicion;
     
 	
 	public String execute(){
@@ -38,8 +41,18 @@ public class PersonaAction extends ActionSupport {
 			return ERROR;
 		    }
 		
+		if (personas.size() == 0) {
+			idCorrecto = 0; 
+		}
+		else {
+			 posicion=personas.size() - 1;
+			 Persona entidad = personas.get(posicion);
+			 idUltimo = entidad.getId();
+			 idCorrecto = idUltimo + 1;
+			 
+		}
         
-		Persona p= new Persona(personas.size(), name, edad, gender);
+		Persona p= new Persona(idCorrecto, name, edad, gender);
 		personas.add(p);
 		
 		
